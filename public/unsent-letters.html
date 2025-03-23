@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsent Letters</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Light Pink Background */
+        body {
+            background-color: #ffccdd !important; /* Light Pink */
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .letter-content {
+            font-size: 5px; /* Adjust as needed */
+            line-height: 1.1;
+            text-align: justify;
+        }
+        #letterImage {
+    max-width: 50%; /* Adjust the image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h2>Unsent Letters</h2>
+        <div class="list-group mt-3">
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter1.jpg')">Letter 1: "The Apartment We Won't Share"</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter2.jpg')">Letter 2: "Mula Sa Malayo"</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter3.jpg')">Letter 3: "I'm Drunk, I Love You"</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter4.jpg')">Letter 4: "Did You Like Her In The Morning?"</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter5.jpg')">Letter 5: "For The Better"</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter6.jpg')">Letter 6: "La La Lost You"</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showLetter('letter7.jpg')">Letter 7: "To Him, With Silence"</a>
+        </div>
+
+        <!-- Image Display -->
+        <div class="text-center mt-4">
+            <img id="letterImage" src="" class="img-fluid d-none">
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn mt-3" style="background-color: #D81B60; color: white;">Back to Home</a>
+        </div>
+    </div>
+    
+    <script>
+        function showLetter(imageSrc) {
+            var letterImage = document.getElementById('letterImage');
+            letterImage.src = 'images/' + imageSrc;
+            letterImage.classList.remove('d-none');  // Make the image visible
+            letterImage.style.opacity = 0;
+
+            // Smooth fade-in effect
+            setTimeout(() => {
+                letterImage.style.opacity = 1;
+            }, 100);
+        }
+    </script>
+</body>
+</html>
+

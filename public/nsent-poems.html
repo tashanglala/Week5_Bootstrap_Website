@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsent Poems</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #ffccdd;
+        }
+        #poemContainer {
+            display: none;
+            margin-top: 20px;
+        }
+        #poemImage {
+            max-width: 500px; /* Adjust the width */
+            max-height: 700px; /* Adjust the height */
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Unsent Poems</h2>
+        <div class="list-group mt-4">
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem1.jpg', event)">Almost, But Never</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem2.jpg', event)">A Love That Stayed Silent</a>            
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem3.jpg', event)">Between Laughter and Longing</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem4.jpg', event)">The Space Between Us</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem5.jpg', event)">If Only You Knew</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem6.jpg', event)">Drunk Words, Sober Truth</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem7.jpg', event)">The Line I Never Crossed</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem8.jpg', event)">More Than Friends, Less Than Lovers</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem9.jpg', event)">Waiting for a Sign</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="showPoem('poem10.jpg', event)">A Love That Wasn't Ours to Have</a>
+        </div>
+        
+        <div class="text-center mt-4" id="poemContainer">
+            <div class="card mx-auto w-50 shadow">
+                <div class="card-body text-center">
+                    <img id="poemImage" src="" class="img-fluid rounded" alt="Poem">
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn mt-3" style="background-color: #D81B60; color: white;">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        function showPoem(imageSrc, event) {
+            event.preventDefault(); // Prevent the link from navigating
+            document.getElementById('poemImage').src = 'images/' + imageSrc;
+            document.getElementById('poemContainer').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
